@@ -1,0 +1,180 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#logo{
+    background-image: url(../../src/assets/pennstate.jpeg);
+    width: 100%;
+    height: 30%;
+    max-width: inherit;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+form{
+    margin-top: 20px;
+}
+
+#exampleInputEmail1, #exampleInputPassword1{
+    line-height: 2;
+}
+
+#forget-div p{
+    font-size: 14px;
+}
+
+#forget-div p span a{
+    color: rgb(33, 88, 176) !important;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+#checkbox-div{
+    margin-top: 3px;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    accent-color: rgb(33, 88, 176);
+    font-size: 14px;
+}
+
+#submit-btn{
+    height: 2.875rem;
+    padding: 0.375rem 1.875rem 0.375rem 1.875rem;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(54, 123, 235);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 20px; 
+  }
+
+
+#assistance-div{
+    margin-top: 55px;
+}
+
+#assistance-div p{
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 14px;
+}
+
+#assistance-div p span a{
+    color: rgb(33, 88, 176) !important;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+#ucm-div{
+    font-size: 14px;
+}
+
+#ucm-div span a{
+    color: rgb(33, 88, 176) !important;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+#alert-div{
+    padding: 3px; 
+    font-size: 12px; 
+    color: #9d373c;
+}
+
+
+/* spinner */
+#loader {
+    width: 20px;
+    height: 20px;
+    border: 5px solid #FFF;
+    border-bottom-color: rgb(33, 88, 176);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+
+    @media (max-width: 320px) {
+        #container {
+            width: 100vw; 
+            height: 75vh; 
+        } 
+    }
+
+    @media (max-width: 380px) {
+        form{
+            margin-top: 10px;
+        }
+        #assistance-div{
+            margin-top: 5px;
+        }   
+        #submit-btn{
+            margin-top: 4px;
+            height: 1.575rem;
+        }
+        #checkbox-div{
+            margin-top: 2px;
+        }
+        #forget-div{
+            margin-top: 0px;
+        } 
+    }
+    
+    @media (max-width: 980px) {
+        #container {
+            width: 60vw; 
+            height: 55vh; 
+        }
+        #exampleInputEmail1, #exampleInputPassword1{
+            line-height: 1;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #container {
+            width: 100vw; 
+            height: 80vh; 
+        }
+        #submit-btn{
+            height: 2.875rem;
+        }
+    }
+    
+    @media (max-width: 680px) {
+        #container {
+            width: 70vw; 
+            height: 75vh; 
+        }
+    }
+
+    @media (max-height: 700px) {
+        #container{
+            height: 85vh;
+        }
+    }

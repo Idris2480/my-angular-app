@@ -1,0 +1,69 @@
+<div id="container">
+  <div id="logo"></div>
+
+
+    <form [formGroup]="newForm" >
+      <div class="form-group" [ngStyle]="{'display': togglePhoneNumber ? 'none' : 'block'}">
+        <input type="text"  formControlName="username" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username" required [(ngModel)]="inputUsername">
+      </div>
+      <div class="form-group" [ngStyle]="{'display': togglePhoneNumber ? 'none' : 'block'}">
+        <input type="password"  formControlName="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" required [(ngModel)]="inputPassword">
+      </div>
+
+      <div class="form-group" [ngStyle]="{'display': togglePhoneNumber ? 'block' : 'none'}">
+        <input type="text"  formControlName="phoneNumber" class="form-control" id="exampleInputEmail1" name="phoneNumber" placeholder="Phone Number" required [(ngModel)]="inputPhoneNumber">
+      </div>
+
+      <div *ngIf="error" class="alert alert-primary text-primary mt-3 bootstrap-alert" role="alert" id="alert-div">
+        {{errorDetails}}
+      </div>
+
+      <div *ngIf="phoneNumberError" class="alert alert-primary text-primary mt-3 bootstrap-alert" role="alert" id="alert-div">
+        {{phoneNumberErrorDetails}}
+      </div>
+
+    </form>
+
+    <div id="forget-div" *ngIf="forgetPasswordToggle">
+      <p>Forgot <span><a href="https://www.psu.edu/contact-us">Username </a></span>or <span><a href="https://www.psu.edu/contact-us">Password </a></span>?</p>
+    </div>
+
+    <div id="checkbox-div">
+      <input type="checkbox"> Remember me on this computer
+    </div>
+
+    <div>
+      <button id="submit-btn" (click)="onToggle()" [ngStyle]="{'display': buttonToggle ? 'none' : 'block'}">
+        <p>
+          <span *ngIf="toggleActivitySpinner" ><span id="loader"></span></span>
+          <span *ngIf="!toggleActivitySpinner">Sign In</span>
+        </p>
+      </button>
+      
+    </div>
+
+    <div>
+      <button id="submit-btn" (click)="onclick()" [ngStyle]="{'display': buttonToggle ? 'block' : 'none'}">
+        <p>
+          <span *ngIf="toggleActivitySpinner" ><span id="loader"></span></span>
+          <span *ngIf="!toggleActivitySpinner">Submit</span>
+        </p>
+      </button>
+    </div>
+
+    <div >
+      <div id="assistance-div">
+        <p>
+          For assistance, contact the <br>
+          <span><a href="https://www.it.psu.edu/support/">Technology Support Center.</a></span>
+        </p>
+      </div>
+  
+      <div id="ucm-div" >
+        <p>By continuing, you understand and acknowledge <br>
+          PSU's <span><a href="https://www.psu.edu/about">Acceptable Use Policy</a></span>.
+        </p>  
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    /* background-image: url(../src/assets/UCM_Spring.jpg); */
+    background-image: url(../src/assets/bd-zoom-background-shield.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
